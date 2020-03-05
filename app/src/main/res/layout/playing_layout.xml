@@ -4,50 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Button
+        android:id="@+id/buttonstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:text="START"
+        android:onClick = "onstart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonresume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:background="#4CAF50"
         android:text="RESUME"
+        android:onClick="onresume"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonpause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="160dp"
         android:backgroundTint="#F44336"
         android:text="PAUSE"
+        android:onClick="onpause"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="120dp"
-        android:layout_height="83dp"
+        android:layout_width="376dp"
+        android:layout_height="235dp"
         android:text="TextView"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonstop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#920606"
         android:text="STOP"
+        android:onClick="onstop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/buttonpause"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonrestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B7F3DF"
+        android:onClick="onrestart"
+        android:text="RESTART"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttondestroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#131212"
+        android:onClick="ondestroy"
+        android:text="DESTROY"
+        android:textColor="#C20E0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
